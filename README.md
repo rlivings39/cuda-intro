@@ -12,7 +12,7 @@ Unified memory in CUDA provides one memory space available to all CPUs and GPUs 
 
 Define a CUDA kernel by using `__global__` on a function. This signifies that it can be run on the device.
 
-To launch a kernel, say `add`, on the device call it with `add<<<gridDim, blockDim>>>(N, x, y);`
+To launch a kernel, say `add`, on the device call it with `add<<<gridDim, blockDim>>>(N, x, y);`. This is called the **execution configuration**.
 
 The CPU thread doesn't wait for kernels to finish. If you need to use the output of kernels on the host call `cudaDeviceSynchronize()`.
 
